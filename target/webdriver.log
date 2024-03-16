@@ -1,0 +1,4 @@
+INFO 18:59:34:725 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 120.0.6099.109 (resolved driver for Chrome 120)
+INFO 18:59:34:765 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/gplagun/.cache/selenium/chromedriver/mac64/120.0.6099.109/chromedriver
+INFO 19:01:43:932 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 120.0.6099.109 (resolved driver for Chrome 120)
+INFO 19:01:43:964 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/gplagun/.cache/selenium/chromedriver/mac64/120.0.6099.109/chromedriver
