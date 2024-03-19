@@ -1,4 +1,4 @@
 @git
   Feature: Learning git
     Scenario: Practicing git
-      Given
+      Given I did
