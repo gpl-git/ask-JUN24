@@ -1,12 +1,27 @@
 @predefined
-Feature: Smoke steps
+Feature: ASK Predefined
+
+  Background:
+    Given I go to "login" page
+    When I type "ask_instr@aol.com" as email
+    And I type "ABC123" as password
+    When I click button "Sign In"
+    And I wait for 1 sec
+    And I click "Quizzes" menu item
+    And I wait for 1 sec
+    When I click button "Create New Quiz"
+    And I wait for 1 sec
 
   @predefined1
-  Scenario: Predefined steps for Google
-    Given I open url "https://google.com"
-    Then I should see page title as "Google"
-    And element with xpath "//*[@name='q']" should be present
-    When I type "Behavior Driven Development" into element with xpath "//*[@name='q']"
-    And I click on element using JavaScript with xpath "(//input[@name='btnK'])[2]"
-    And I wait for element with xpath "//*[@id='res']" to be present
-    Then element with xpath "//*[@id='res']" should contain text "Cucumber"
+  Scenario: Quiz Demo
+    When I type "Demo Quiz TA" as quiz title
+    And I add a question
+    And I select "Single" question in "Q1"
+    When I type "Question 1" into question field of "Q1"
+    And I type "Option 1" into "Option 1*" of "Q1"
+    And I type "Option 2" into "Option 2*" of "Q1"
+    When I select "Option 1*" as a correct option in "Q1"
+    And I click button "Save"
+    And I wait for 1 sec
+    Then "Demo Quiz TA" should be displayed on the list of quizzes
+    And I delete "Demo Quiz TA" from the list of quizzes
