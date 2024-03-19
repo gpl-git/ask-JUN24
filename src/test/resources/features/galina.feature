@@ -3,4 +3,4 @@
   Feature: Learning git
 
     Scenario: Practicing git
-      Given  I ghghgh
+      Given  I Test 2
