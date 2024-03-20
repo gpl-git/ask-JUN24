@@ -1,5 +1,4 @@
 @git
-  Feature: Learning git
-
-    Scenario: Practicing git
+  Feature: learning git
+    Scenario: practicing git
       Given
