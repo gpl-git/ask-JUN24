@@ -58,3 +58,45 @@ java.net.SocketException: Connection reset
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
 	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+INFO 17:22:41:971 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 17:22:42:001 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 17:25:01:202 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 17:25:01:229 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:14:02:252 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:14:02:281 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:17:26:371 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:17:26:397 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:18:55:519 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:18:55:544 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:23:24:961 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:23:24:986 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:24:03:877 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:24:03:903 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:25:04:219 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:25:04:245 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:25:49:539 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:25:49:565 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:26:30:550 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:26:30:574 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:42:23:036 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:42:23:060 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:43:43:551 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:43:43:576 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:49:10:549 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:49:10:576 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:53:10:165 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:53:10:189 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 18:57:31:684 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 18:57:31:706 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 19:00:17:875 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 19:00:17:904 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 19:02:21:420 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 19:02:21:445 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 19:03:20:081 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 19:03:20:108 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 19:05:11:369 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 19:05:11:396 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 19:06:34:239 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 19:06:34:266 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
+INFO 19:11:32:611 wdm.WebDriverManager resolveDriverVersion:1212 Using chromedriver 122.0.6261.128 (resolved driver for Chrome 122)
+INFO 19:11:32:638 wdm.WebDriverManager exportDriver:1265 Exporting webdriver.chrome.driver as /Users/yana/.cache/selenium/chromedriver/mac-x64/122.0.6261.128/chromedriver
