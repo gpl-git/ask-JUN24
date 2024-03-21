@@ -96,4 +96,25 @@ public class QuizStepDefs {
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizTitle+"')]/../../..//*[text()='Delete']")).click();
         getDriver().findElement(By.xpath("//ac-modal-confirmation/..//*[text()='Delete']")).click();
     }
+
+    @And("I add {int} Textual questions")
+    public void iAddTextualQuestions(int num) throws InterruptedException {
+        for(int i = 1; i<=num; i++){
+            getDriver().findElement(By.xpath("//mat-icon[text()='add_circle']")).click();
+            Thread.sleep(1000);
+            getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q"+i+"')]/../../..//*[contains(text(),'Textual')]")).click();
+            getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q"+i+"')]/../../..//*[@formcontrolname='question']")).sendKeys("Question" + i);
+
+
+        }
+    }
+
+    @When("I add up to {int} options in {string}")
+    public void iAddUpToOptionsIn(int num, String qNum) {
+        for(int i= 3; i<=num; i++){
+            getDriver().findElement(By.xpath("//*[contains(text(),'Add Option')]")).click();
+            getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+qNum+"')]/../../..//*[@placeholder='Option "+i+"*']")).sendKeys("Option " +i);
+
+        }
+    }
 }
