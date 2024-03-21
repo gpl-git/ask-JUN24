@@ -12,12 +12,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class TextualQYanaGStepdefs {
-    @And("I make {string} Show-Stopper")
-    public void iMakeTheQuestionShowStopper(String qNum) {
-        if (qNum.equals("Q1")) {
+    @And("I make question {int} Show-Stopper")
+    public void iMakeTheQuestionShowStopper(int num) {
+        if (num == 1) {
             getDriver().findElement(By.xpath("(//*[@class='mat-checkbox-inner-container'])")).click();
         } else {
-            getDriver().findElement(By.xpath("(//*[@class='mat-checkbox-inner-container'])[2]")).click();
+            getDriver().findElement(By.xpath("(//*[@class='mat-checkbox-inner-container'])["+num+"]")).click();
         }
     }
 
@@ -31,7 +31,7 @@ public class TextualQYanaGStepdefs {
         AssertionsForClassTypes.assertThat(getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+qNum+"*')]")).isDisplayed()).isTrue();
     }
 
-    @Then("{string} checkbox should be displayed")
+    @Then("{string} should be displayed")
     public void shouldBeDisplayed(String iconName) {
         AssertionsForClassTypes.assertThat(getDriver().findElement(By.xpath("//span[contains(text(), '"+iconName+"')]")).isDisplayed()).isTrue();
     }
