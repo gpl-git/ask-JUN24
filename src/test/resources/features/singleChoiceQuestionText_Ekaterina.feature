@@ -11,7 +11,7 @@ Feature: Single Choice Question Text
     And I wait for 1 sec
     When I click button "Create New Quiz"
     And I wait for 1 sec
-    When I type "Demo Quiz TA" as quiz title
+    When I type "Demo Quiz Ekaterina" as quiz title
     And I add a question
     And I select "Single" question in "Q1"
 
@@ -24,7 +24,11 @@ Feature: Single Choice Question Text
     When I select "Option 1*" as a correct option in "Q1"
     And I click button "Save"
     And I wait for 1 sec
-    Then "Demo Quiz TA" should be displayed on the list of quizzes
+    Then "Demo Quiz Ekaterina" should be displayed on the list of quizzes
+    And I wait for 1 sec
+    And I delete "Demo Quiz Ekaterina" from the list of quizzes
+
+
     Examples:
       | q1Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
       | "S"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -39,7 +43,7 @@ Feature: Single Choice Question Text
     When I select "Option 1*" as a correct option in "Q1"
     When I click button "Save"
     And I wait for 2 sec
-    Then element with "//*[contains(text(), 'This field is required')]" should be displayed
+    Then error message "This field is required" should be displayed
 
   @testAutomation3
   Scenario Outline: Single Choice Question should not accept 1001 characters and a single space character
