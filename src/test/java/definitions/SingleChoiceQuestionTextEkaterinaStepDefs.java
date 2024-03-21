@@ -24,5 +24,16 @@ public class SingleChoiceQuestionTextEkaterinaStepDefs {
             }
         }
     }
+
+    @Then("error message {string} should be displayed")
+    public void errorMessageShouldBeDisplayed(String expError) {
+        String actError = getDriver().findElement(By.xpath("//mat-error")).getText();
+        assertThat(actError.contains(expError)).isTrue();
+    }
+
+    @Then("error message should be displayed")
+    public void errorMessageShouldBeDisplayed() {
+        assertThat(getDriver().findElement(By.xpath("//mat-error")).isDisplayed()).isTrue();
+    }
 }
 
