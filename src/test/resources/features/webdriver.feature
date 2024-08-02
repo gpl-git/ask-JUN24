@@ -5,7 +5,7 @@
     Scenario: Password  and Confirm Password Fields Behavior
       Given I go to "sample"
       When I type "A1" incorrect password
-      And I submit the formgit
+      And I submit the form
       Then password error message should be displayed
       Then password error message "Please enter at least 5 characters." should be displayed
       When I clear password field
