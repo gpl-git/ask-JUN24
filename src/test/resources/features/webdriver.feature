@@ -2,10 +2,10 @@
   Feature: WebDriver Scenarios
 
     @webdriver1
-    Scenario: Password  and Confirm Password Field Behavior
+    Scenario: Password  and Confirm Password Fields Behavior
       Given I go to "sample"
       When I type "A1" incorrect password
-      And I submit the form
+      And I submit the formgit
       Then password error message should be displayed
       Then password error message "Please enter at least 5 characters." should be displayed
       When I clear password field
