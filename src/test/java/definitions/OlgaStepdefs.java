@@ -32,4 +32,19 @@ public class OlgaStepdefs {
         assertThat(getDriver().findElement(By.xpath("//*[@id='username-error']")).getText().equalsIgnoreCase(errorMessage)).isTrue();
 
     }
+
+    @When("I type {string}")
+    public void iType(String email) {
+        getDriver().findElement(By.xpath("//input[@type='email']")).sendKeys(email);
+    }
+
+    @And("I wait for {int} sec")
+    public void iWaitForSec(int sec) throws Exception {
+        Thread.sleep(sec * 1000);
+    }
+
+    @Then("error message {string} should be displayed")
+    public void errorMessageShouldBeDisplayed(String errorMessage) {
+        assertThat(getDriver().findElement(By.xpath("//label[@id='email-error']")).getText().equalsIgnoreCase(errorMessage)).isTrue();
+    }
 }
