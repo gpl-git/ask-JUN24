@@ -1,7 +1,8 @@
 @git
 
-  Feature: Git commands
+Feature: Git practice
 
-    @git1
-    Scenario: Learning git
-      Given I learn git commands
+  @git1
+  Scenario: Git commands
+    Given I learn git commands
+
