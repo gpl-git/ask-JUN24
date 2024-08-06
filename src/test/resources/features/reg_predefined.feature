@@ -1,3 +1,2 @@
-@git
-
+@reg
   Feature:
