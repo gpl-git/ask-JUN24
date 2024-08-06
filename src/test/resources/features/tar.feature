@@ -4,4 +4,4 @@
 
     @git1
     Scenario: Learning git
-      Given I learn git commandsgi
+      Given I learn git commands
