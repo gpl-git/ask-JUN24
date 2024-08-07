@@ -13,32 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class QuizStepDefs {
-    @Given("I open {string} page")
-    public void iOpenPage(String url) {
-        if (url.equals("login")) {
-            getDriver().get("http://ask-qa.portnov.com/#/login");
-        } else if (url.equals("registration")) {
-            getDriver().get("http://ask-qa.portnov.com/#/registration");
-        } else {
-            System.out.println("This site is not supported: " + url);
-        }
-
-    }
-
-    @And("I wait for {int} sec")
-    public void iWaitForSec(int sec) throws InterruptedException {
-        Thread.sleep(sec * 1000);
-    }
-
-    @When("I type {string} into email field")
-    public void iTypeIntoEmailField(String email) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
-    }
-
-    @And("I type {string} into password field")
-    public void iTypeIntoPasswordField(String password) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
-    }
+    
 
     @When("I click {string} button")
     public void iClickButton(String btnName) {
