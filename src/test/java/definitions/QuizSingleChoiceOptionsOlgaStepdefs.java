@@ -19,7 +19,6 @@ public class QuizSingleChoiceOptionsOlgaStepdefs {
 
     @And("I click on settings icon of Option number {int}")
     public void iClickIcon(int optionNum) {
-//        getDriver().findElement(By.xpath("//*[contains(@class,'option-row')]/following-sibling::*//button[span[mat-icon]]")).click();
         getDriver().findElement(By.xpath("//*[@placeholder='Option " + optionNum + "*']/ancestor::*[contains(@class,'option-row')]//button[span[mat-icon]]")).click();
     }
 
@@ -58,9 +57,23 @@ public class QuizSingleChoiceOptionsOlgaStepdefs {
         assertThat(optionsBeforeMove.indexOf("Option " + option) != optionsAfterMove.indexOf("Option " + option)).isTrue();
     }
 
-    @When("I type {int} characters into {string} field of {string}")
-    public void iTypeIntoFieldOf(int charactersNum, String oNum, String qNum) {
-        String randomString = RandomStringUtils.randomAlphanumeric(charactersNum);
+    @When("I type {int} characters having alphabetic {string} numeric {string} into {string} field of {string}")
+    public void iTypeIntoFieldOf(int charactersNum, String isLetterUsed, String isNumberUsed, String oNum, String qNum) {
+        String randomString = RandomStringUtils.random(charactersNum, Boolean.parseBoolean(isLetterUsed), Boolean.parseBoolean(isNumberUsed));
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+qNum+"')]/../../..//*[@placeholder = '"+oNum+"']")).sendKeys(randomString);
     }
+
+    @Then("{string} area should be displayed")
+    public void areaShouldBeDisplayed(String areaName) {
+        assertThat(getDriver().findElement(By.xpath("//textarea[@placeholder='"+areaName+"']")).isDisplayed()).isTrue();
+    }
+
+    @And("I add {int} options with values")
+    public void iAddOptionsWithValues(int numOfOptions) {
+        for (int i = 2; i < numOfOptions+2; i++) {
+            getDriver().findElement(By.xpath("//span[contains(text(),'Add Option')]")).click();
+            getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q1')]/../../..//*[@placeholder = 'Option "+(i+1)+"*']")).sendKeys("Option "+(i+1));
+        }
+    }
+
 }
