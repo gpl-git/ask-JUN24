@@ -81,8 +81,6 @@ Feature: Textual Question- Text
             And I click "Save" button
             And I wait for 2 sec
             Then error message should be displayed
-# This is test comment
-
 
 
 
