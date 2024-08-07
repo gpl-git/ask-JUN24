@@ -13,7 +13,7 @@ public class RegStepDefs {
     @Given("I open {string} page")
     public void iOpenPage(String url) {
         if (url.contains("registration")) {
-            getDriver().get("http://ask-qa.portnov.com/#/registration");
+        getDriver().get("http://ask-qa.portnov.com/#/registration");
         } else if (url.contains("login")) {
             getDriver().get("http://ask-qa.portnov.com/#/login");
         }else {
