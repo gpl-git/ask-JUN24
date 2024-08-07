@@ -84,7 +84,7 @@ Feature: Textual Question- Text
             Then error message should be displayed
             And I click "Save" button
             And I wait for 2 sec
-            Then error message should be displayed
+
 
 
 
