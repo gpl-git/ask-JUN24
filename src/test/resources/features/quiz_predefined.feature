@@ -27,4 +27,3 @@
       And I wait for 1 sec
       Then "TA Quiz Demo" should be displayed on the list of quizzes
       And I delete "TA Quiz Demo" from the list of quizzes
-      
