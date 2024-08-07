@@ -30,3 +30,4 @@
         When I type "" into password field
         When I submit the form
         Then error message "This field is required" should be displayed
+
