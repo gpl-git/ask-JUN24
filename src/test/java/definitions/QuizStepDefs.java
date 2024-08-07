@@ -84,4 +84,9 @@ public class QuizStepDefs {
         getDriver().findElement(By.xpath("//ac-modal-confirmation/..//*[text()='Delete']")).click();
 
     }
+
+    @When("I click on {string} menu item")
+    public void iClickOnMenuItem(String item) {
+        getDriver().findElement(By.xpath("//h5[text()='" + item + "']")).click();
+    }
 }
