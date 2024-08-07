@@ -1,5 +1,6 @@
 package definitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -21,11 +22,19 @@ public class QuizTextualText_binduStepDefs {
     }
 
     @When("I enter {int} alphanumeric characters")
-    public void iEnterAlphanumericCharacters(int number) {
+    public void iEnterAlphanumericCharacters(int number)  {
         boolean useLetters = true;
         boolean useNumbers = true;
         String generatedString = RandomStringUtils.random(number, useLetters, useNumbers);
         getDriver().findElement(By.xpath("//*[@formcontrolname='question']")).sendKeys(generatedString);
+    }
+
+    @And("I delete {string} from the list of quizzes BF")
+    public void iDeleteFromTheListOfQuizzesBF(String quizTitle)throws Exception{
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+quizTitle+"')]")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+quizTitle+"')]/../../..//*[contains(text(),'Delete')]")).click();
+        getDriver().findElement(By.xpath("//ac-modal-confirmation/..//*[text()='Delete']")).click();
+        Thread.sleep(1000);
     }
 }
 

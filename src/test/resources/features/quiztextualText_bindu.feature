@@ -17,7 +17,7 @@ Feature: Textual Question- Text
   @quiz1 @smoke
   Scenario: Happy Path
     And I wait for 1 sec
-    And I type "TA binduQuiz" as quiz title
+    And I type "TA bindu Quiz" as quiz title
     When I add a question
     And I wait for 2 sec
     When I select "Textual" in "Q1"
@@ -25,20 +25,22 @@ Feature: Textual Question- Text
     When I type "Q123!" into Question
     And I click "Save" button
     And I wait for 2 sec
-    Then "TA binduQuiz" should be displayed on the list of quizzes
+    Then "TA bindu Quiz" should be displayed on the list of quizzes
 
     @quiz2
     Scenario: Textual Question - Single Character
-      And I wait for 2 sec
-      And I type "TA binduQuiz" as quiz title
+      And I wait for 1 sec
+      And I type "TA bindu Quiz12" as quiz title
       When I add a question
-      And I wait for 2 sec
+      And I wait for 1 sec
       When I select "Textual" in "Q1"
-      And  I wait for 2 sec
+      And  I wait for 1 sec
       When I type "A" into Question
       And I click "Save" button
       And I wait for 4 sec
-      Then "TA binduQuiz" should be displayed on the list of quizzes
+      Then "TA bindu Quiz12" should be displayed on the list of quizzes
+      And I wait for 3 sec
+      And I delete "TA bindu Quiz12" from the list of quizzes BF
 
 
       @quiz3
@@ -71,6 +73,7 @@ Feature: Textual Question- Text
 
           @quiz5
           Scenario: Textual Question - Over 1000 Characters
+            # Scenario fails, Known issue.
             And I wait for 2 sec
             And I type "TA binduQuiz4" as quiz title
             When I add a question
