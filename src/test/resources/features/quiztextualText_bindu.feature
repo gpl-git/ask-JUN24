@@ -15,7 +15,7 @@ Feature: Textual Question- Text
 
 
   @quiz1 @smoke
-  Scenario: Happy Path
+  Scenario: Textual Question - Alphanumeric & Special characters
     And I wait for 1 sec
     And I type "TA bindu Quiz" as quiz title
     When I add a question
@@ -81,6 +81,7 @@ Feature: Textual Question- Text
             When I select "Textual" in "Q1"
             And  I wait for 2 sec
             When I enter 1001 alphanumeric characters
+            Then error message should be displayed
             And I click "Save" button
             And I wait for 2 sec
             Then error message should be displayed
