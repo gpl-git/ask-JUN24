@@ -68,4 +68,11 @@ public class UsermanagementTatsianaStepdefs {
     public void iSelectTS(String buttonName) {
         getDriver().findElement(By.xpath("//button[contains(.,\""+buttonName+"\")] ")).click();
     }
-}
+
+//    @When("I click on {string} TS")
+//    public void iClickOnTS(String buttonName) {
+//
+//            getDriver().findElement(By.xpath("//span[contains(.,'"+buttonName+"')]/parent::button")).click();
+//        }
+    }
+
