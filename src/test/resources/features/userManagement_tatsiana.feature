@@ -21,7 +21,7 @@ Feature: userManagement
     And I wait for 5 sec
     When I click on "Options" button
     And I wait for 1 sec
-    When I select "Change User's Role"
+    When I select "Change User's Role" TS
     And I click "Change Role"
     And I wait for 3 sec
     Then user role should be displayed "STUDENT"
@@ -34,7 +34,7 @@ Feature: userManagement
     And I wait for 5 sec
     When I click on "Options" button
     And I wait for 1 sec
-    When I select "Change User's Role"
+    When I select "Change User's Role" TS
     And I click "Change Role"
     And I wait for 3 sec
     Then user role should be displayed "TEACHER"
@@ -48,7 +48,7 @@ Feature: userManagement
     And I wait for 5 sec
     When I click on "Options" button
     And I wait for 1 sec
-    When I select "Change User's Role"
+    When I select "Change User's Role" TS
     When I click on the "No,Thanks"
     Then user role should be displayed "TEACHER"
 
