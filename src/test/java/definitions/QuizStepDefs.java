@@ -82,4 +82,26 @@ public class QuizStepDefs {
 
 
     }
+
+    @Then("current url should contain {string}")
+    public void currentUrlShouldContain(String expUrl) {
+        String curUrl = getDriver().getCurrentUrl();
+        assertThat(curUrl.contains(expUrl)).isTrue();
+    }
+
+    @Then("user role should be {string}")
+    public void userRoleShouldBe(String role) {
+        String actRole = getDriver().findElement(By.xpath("//div[@class='info']")).getText();
+        assertThat(actRole.contains(role)).isTrue();
+    }
+
+    @When("I select {string} in {string}")
+    public void iSelectIn(String qType, String qNum) {
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+qNum+"')]/../../..//*[contains(text(), '"+qType+"')]")).click();
+    }
+
+    @And("I type {string} into question field of {string}")
+    public void iTypeIntoQuestionFieldOf(String qText, String qNum) {
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+qNum+"')]/../../..//*[@formcontrolname='question']")).sendKeys(qText);
+    }
 }
