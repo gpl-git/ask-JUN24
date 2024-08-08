@@ -118,12 +118,16 @@ public class QuizTotalQuestionsUlanStepDefs {
         }
     }
 
+    @Then("element {string} should display {string} questions on the list of quizzes")
+    public void elementShouldDisplayQuestionsOnTheListOfQuizzes(String quizTitle, String num) {
 
-//    @Then("element {string} should be displayed on the list of quizzes of the ASK page")
-//    public void shouldBeDisplayedOnTheListOfQuizzesOfTheASKPage(String quizTitle, String text) {
-//        String actualText = getDriver().findElement(By.xpath("//mat-panel-description/./.." + quizTitle + "')]")).getText();
-//        assertThat(actualText).containsIgnoringCase(text);
-//            }
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizTitle+"')]")).click();
+        String expNum = getDriver().findElement(By.xpath("//*[contains(text(),‘“+quizTitle+“’)]/..//mat-panel-description")).getText();
+        assertThat(expNum.contains(num)).isTrue();
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizTitle+"')]/../../..//*[contains(text(),'Delete')]")).click();
+        getDriver().findElement(By.xpath("//ac-modal-confirmation/..//*[text()='Delete']")).click();
+    }
+
 
 
 }

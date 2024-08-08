@@ -30,11 +30,11 @@ public class RegQuizTotalQuestionsUlan {
             System.out.println("This website is not supported " + url);
         }
     }
-
-    @And("I wait for {int} sec")
-    public void iWaitForSec(int sec) throws InterruptedException {
-        Thread.sleep(1000 * sec);
-    }
+//
+//    @And("I wait for {int} sec")
+//    public void iWaitForSec(int sec) throws InterruptedException {
+//        Thread.sleep(1000 * sec);
+//    }
 
     @When("I type {string} into firstname filed of the ASK page")
     public void iTypeIntoFirstnameFiledOfTheASKPage(String firstName) {
@@ -94,5 +94,8 @@ public class RegQuizTotalQuestionsUlan {
     }
 
 
+    @Then("element {string} should be displayed on the list of quizzes of the ASK page")
+    public void elementShouldBeDisplayedOnTheListOfQuizzesOfTheASKPage(String num) {
+    }
 }
 

@@ -32,14 +32,15 @@ Feature: Quiz Demo6
   @quizTotalQuestionsUlan2
   Scenario: Add 5 question US
     And I type "TA Quiz Demo1" as quiz title of the ASK page
-    And I wait for 5 sec
+    And I wait for 3 sec
     When I add 5 Textual questions of the ASK page
-    And I wait for 10 sec
-    When I click "Save" button of the ASK page
-    Then "TA Quiz Demo1" should be displayed on the list of quizzes of the ASK page
-    Then element "TA Quiz Demo1 5 questions" should be displayed on the list of quizzes of the ASK page
-    And I wait for 10 sec
-    And I delete "TA Quiz Demo1" from the list of quizzes of the ASK page
+    And I wait for 1 sec
+    And I click "Save" button
+#    When I click "Save" button of the ASK page
+#    Then "TA Quiz Demo1" should be displayed on the list of quizzes of the ASK page
+    Then element "TA Quiz Demo1" should display "5" questions on the list of quizzes
+#    And I wait for 10 sec
+#    And I delete "TA Quiz Demo1" from the list of quizzes of the ASK page
 
 
   @quizTotalQuestionsUlan3
