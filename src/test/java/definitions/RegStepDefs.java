@@ -10,9 +10,21 @@ import static support.TestContext.getDriver;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class RegStepDefs {
+    @Given("I open {string} page")
+    public void iOpenPage(String url) {
+        if (url.contains("registration")) {
+            getDriver().get("http://ask-qa.portnov.com/#/registration");
+        } else if (url.contains("login")) {
+            getDriver().get("http://ask-qa.portnov.com/#/login");
+        }else {
+            System.out.println("This website is not supported " + url);
+        }
+    }
 
-
-
+    @And("I wait for {int} sec")
+    public void iWaitForSec(int sec) throws InterruptedException {
+        Thread.sleep(1000*sec);
+    }
 
     @When("I type {string} into firstname filed")
     public void iTypeIntoFirstnameFiled(String firstName) {
@@ -25,13 +37,21 @@ public class RegStepDefs {
 
     }
 
+    @When("I type {string} into email field")
+    public void iTypeIntoEmailField(String email) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
+    }
 
     @And("I type {string} into group field")
     public void iTypeIntoGroupField(String group) {
         getDriver().findElement(By.xpath("//input[@formcontrolname='group']")).sendKeys(group);
     }
 
+    @When("I type {string} into password field")
+    public void iTypeIntoPasswordField(String password) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
 
+    }
 
     @And("I type {string} into confirmPassword field")
     public void iTypeIntoConfirmPasswordFild(String password) {
