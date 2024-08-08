@@ -105,5 +105,6 @@ public class QuizStepDefs {
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizTitle+"')]/../../..//*[contains(text(),'Delete')]")).click();
         getDriver().findElement(By.xpath("//ac-modal-confirmation/..//*[text()='Delete']")).click();
 
+
     }
 }
