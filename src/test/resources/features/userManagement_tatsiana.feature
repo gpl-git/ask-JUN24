@@ -17,7 +17,7 @@ Feature: userManagement
     And I click "Teachers" option
     Then "Tatsiana Simakovich" should be displayed on list of names
     And I wait for 3 sec
-    When I click on "Tatsiana Simakovich"
+    When I click on "Tatsiana Simakovich" TS
     And I wait for 5 sec
     When I click on "Options" button
     And I wait for 1 sec
@@ -30,7 +30,7 @@ Feature: userManagement
   Scenario: Change Student's Role to Teacher
     Then "Tatsiana Simakovich" should be displayed on list of names
     And I wait for 3 sec
-    When I click on "Tatsiana Simakovich"
+    When I click on "Tatsiana Simakovich" TS
     And I wait for 5 sec
     When I click on "Options" button
     And I wait for 1 sec
@@ -44,7 +44,7 @@ Feature: userManagement
     And I click "Teachers" option
     Then "Tatsiana Simakovich" should be displayed on list of names
     And I wait for 3 sec
-    When I click on "Tatsiana Simakovich"
+    When I click on "Tatsiana Simakovich" TS
     And I wait for 5 sec
     When I click on "Options" button
     And I wait for 1 sec

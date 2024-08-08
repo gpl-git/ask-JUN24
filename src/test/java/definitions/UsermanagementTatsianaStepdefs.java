@@ -32,20 +32,11 @@ public class UsermanagementTatsianaStepdefs {
     }
 
 
-    @When("I click on {string}")
-    public void iClickOn(String name) {
-        getDriver().findElement(By.xpath("//h4[contains(text(),'"+name+"')]")).click();
-    }
-
     @When("I click on {string} button")
     public void iClickOnButton(String buttonName) {
         getDriver().findElement(By.xpath("//span[contains(.,'"+buttonName+"')]/parent::button")).click();
     }
 
-//    @When("I select {string}")
-//    public void iSelect(String buttonName) {
-//        getDriver().findElement(By.xpath("//button[contains(.,\""+buttonName+"\")] ")).click();
-//    }
 
     @And("I click {string}")
     public void iClick(String role) {
@@ -69,10 +60,12 @@ public class UsermanagementTatsianaStepdefs {
         getDriver().findElement(By.xpath("//button[contains(.,\""+buttonName+"\")] ")).click();
     }
 
-//    @When("I click on {string} TS")
-//    public void iClickOnTS(String buttonName) {
-//
-//            getDriver().findElement(By.xpath("//span[contains(.,'"+buttonName+"')]/parent::button")).click();
-//        }
+    @When("I click on {string} TS")
+    public void iClickOnTS(String name
+    ) {
+        getDriver().findElement(By.xpath("//h4[contains(text(),'"+name+"')]")).click();
+    }
+
+
     }
 
