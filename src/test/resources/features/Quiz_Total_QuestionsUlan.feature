@@ -37,7 +37,7 @@ Feature: Quiz Demo6
     And I wait for 10 sec
     When I click "Save" button of the ASK page
     Then "TA Quiz Demo1" should be displayed on the list of quizzes of the ASK page
-#    Then element "TA Quiz Demo1 5 questions" should be displayed on the list of quizzes of the ASK page
+    Then element "TA Quiz Demo1 5 questions" should be displayed on the list of quizzes of the ASK page
     And I wait for 10 sec
     And I delete "TA Quiz Demo1" from the list of quizzes of the ASK page
 
