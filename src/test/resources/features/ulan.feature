@@ -1,4 +1,4 @@
-@git
+gi@git
 
   Feature: Git commands
 
