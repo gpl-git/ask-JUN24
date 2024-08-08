@@ -28,4 +28,14 @@ public class ecaterinaWSingleChoiceQOtherStepsDefs {
     public void iClickTestButton(String test) {
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+test+"')]/../../../div/div/div/div/a")).click();
     }
+
+    @Then("I verify that option other is displayed in the {string} of {string} quiz")
+    public void iVerifyThatOptionOtherIsDisplayedInTheOfQuiz(String btnName, String quizTitle) {
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'" + quizTitle + "')]")).click();
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'" + quizTitle + "')]/../../..//*[contains(text(),'" + btnName + "')]")).click();
+        assertThat(getDriver().findElement(By.xpath("//textarea[@formcontrolname='textAnswer']")).isDisplayed()).isTrue();
+        getDriver().findElement(By.xpath("//*[text()='Close']")).click();
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizTitle+"')]/../../..//*[contains(text(),'Delete')]")).click();
+        getDriver().findElement(By.xpath("//ac-modal-confirmation/..//*[text()='Delete']")).click();
+    }
 }

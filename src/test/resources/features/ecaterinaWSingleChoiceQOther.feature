@@ -28,7 +28,5 @@ Scenario: Verify Include "Other" text area option
   And I click "Save" button
   And I wait for 1 sec
   Then "Single Choice Question - Other" should be displayed on the list of quizzes
-  When I click on "Single Choice Question - Other" test
-  And I click "Preview" test button
-  And I delete "Single Choice Question - Other" from the list of quizzes
+  Then I verify that option other is displayed in the "Preview" of "Single Choice Question - Other" quiz
 
