@@ -1,5 +1,5 @@
 @quizTotalQuestionsUlan
-Feature: Quiz Demo6
+Feature: Quiz Demo
 
   Background:
     Given I open "login" page of The ASK page US
@@ -31,31 +31,38 @@ Feature: Quiz Demo6
 
   @quizTotalQuestionsUlan2
   Scenario: Add 5 question US
-    And I type "TA Quiz Demo1" as quiz title of the ASK page
-    And I wait for 5 sec
+    And I type "TA Quiz bill" as quiz title of the ASK page
+    And I wait for 1 sec
     When I add 5 Textual questions of the ASK page
-    And I wait for 10 sec
     When I click "Save" button of the ASK page
-    Then "TA Quiz Demo1" should be displayed on the list of quizzes of the ASK page
-    Then element "TA Quiz Demo1 5 questions" should be displayed on the list of quizzes of the ASK page
-    And I wait for 10 sec
-    And I delete "TA Quiz Demo1" from the list of quizzes of the ASK page
-
+    And I wait for 1 sec
+#    Then "TA Quiz bill" should be displayed on the list of quizzes of the ASK page
+#    And I wait for 1 sec
+    Then "TA Quiz bill" should display "5" questions and delete quiz
+    And I wait for 5 sec
 
   @quizTotalQuestionsUlan3
-  Scenario Outline: Add 6 question US
+  Scenario Outline: Quiz Total Questions - allowed number
     And I type "TA Quiz Demo1" as quiz title of the ASK page
-    And I wait for 5 sec
-    When I add <quantity> Textual questions of the ASK page
-    And I wait for 10 sec
+    And I wait for 1 sec
+    When I add <num> Textual questions of the ASK page
     When I click "Save" button of the ASK page
+    And I wait for 1 sec
     Then "TA Quiz Demo1" should be displayed on the list of quizzes of the ASK page
-#    Then element <name> 5 questions should be displayed on the list of quizzes of the ASK page
-    And I wait for 10 sec
-    Then "TA Quiz Demo1" should be displayed on the list of quizzes of the ASK page
-    And I delete "TA Quiz Demo1" from the list of quizzes of the ASK page
+    And I wait for 1 sec
+    Then "TA Quiz Demo1" should display <num1> questions and delete quiz
+    And I wait for 5 sec
     Examples:
-      | quantity |
-      | 5        |
-      | 50       |
-      | 51       |
+      | num | num1 |
+      | 1 | "1" |
+      | 3 | "3" |
+      | 5 | "5" |
+
+
+  @quizTotalQuestionsUlan4
+  Scenario: Add 51 question US
+    And I type "TA Quiz Demo1" as quiz title of the ASK page
+    And I wait for 1 sec
+    When I add 3 Textual questions of the ASK page
+    Then button "Save" should be disabled US
+    Then error message should be displayed US

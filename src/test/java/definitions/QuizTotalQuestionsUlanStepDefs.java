@@ -119,39 +119,29 @@ public class QuizTotalQuestionsUlanStepDefs {
     }
 
 
-//    @Then("element {string} should be displayed on the list of quizzes of the ASK page")
-//    public void shouldBeDisplayedOnTheListOfQuizzesOfTheASKPage(String quizTitle, String text) {
-//        String actualText = getDriver().findElement(By.xpath("//mat-panel-description/./.." + quizTitle + "')]")).getText();
-//        assertThat(actualText).containsIgnoringCase(text);
-//            }
+    @Then("{string} should display {string} questions and delete quiz")
+    public void shouldDisplayQuestionsAndDeleteQuiz(String quizTitle, String num) throws InterruptedException {
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'" + quizTitle + "')]")).click();
+        String actNum = getDriver().findElement(By.xpath("//[contains(text(),'" + quizTitle + "')]/..//mat-panel-description")).getText();
+        System.out.println(actNum);
+        assertThat(actNum.contains(num)).isTrue();
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'" + quizTitle + "')]/../../..//[contains(text(),'Delete')]")).click();
+        Thread.sleep(1000);
+        getDriver().findElement(By.xpath("//ac-modal-confirmation/..//*[text()='Delete']")).click();
+        Thread.sleep(5000);
+    }
 
 
+    @Then("button {string} should be disabled US")
+    public void buttonShouldBeDisabledUS(String btnName) {
+        assertThat(getDriver().findElement(By.xpath("//span[contains(text(),'" + btnName + "')]")).isEnabled()).isFalse();
+    }
+
+    @Then("error message should be displayed US")
+    public void errorMessageShouldBeDisplayedUS() {
+        assertThat(getDriver().findElement(By.xpath("//mat-error")).isDisplayed()).isTrue();
+    }
 }
-
-
-
-
-
-
-
-
-
-//    @Then("{int} questions of the TA Quiz Demo should be displayed on the list of quizzes")
-//    public void questionsOfTheTAQuizDemoShouldBeDisplayedOnTheListOfQuizzes(int num) {
-//        for (int i = 1; i = num;){
-//
-//        }
-
-
-//    @When("I add {int} Textual questionsUs")
-//    public void iAddTextualQuestionsUs(int num) throws InterruptedException {
-//        for (int i =1; i <=num ; i++) {
-//            getDriver().findElement(By.xpath("//*[contains(text(), 'add_circle')]")).click();
-//            Thread.sleep(1000);
-//            getDriver().findElement(By.xpath("//*[contains(text(),'Q" + i + "')]/../../..//*[contains(text(),'Textual')]")).click();
-//            String xpath = "//*[contains(text(),'Q" + i+"')]/../../..//*[@formcontrolname='question']";
-//            getDriver().findElement(By.xpath(xpath)).sendKeys("Question " + i);
-
 
 
 
